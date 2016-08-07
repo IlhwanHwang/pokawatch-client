@@ -131,18 +131,15 @@ void Network::init(char * argv) {
 
 void Network::loop() {
 	while (1) {
-		if (getGameStart()[0] == GAME_START_CHAR) // for client when game started 
-		{
-			getProtocolDataFromServer();												// get protocol data of that time
+		getProtocolDataFromServer();												// get protocol data of that time
 
-			if (team == TEAM_POSTECH) Ai::ai(*((protocol_data*)messageToClient));
-			else Ai::ai(mirror_data(*((protocol_data*)messageToClient)));
+		if (team == Ai::getPivot()) Ai::ai(*((protocol_data*)messageToClient));
+		else Ai::ai(mirror_data(*((protocol_data*)messageToClient)));
 
-			char toSend[MESSAGE_TO_SERVER_SIZE];
-			for (int i = 0; i < (UNIT_NUM_MAX) / 2; i++)
-				toSend[i] = getCommand(i) + '0';
+		char toSend[MESSAGE_TO_SERVER_SIZE];
+		for (int i = 0; i < (UNIT_NUM_MAX) / 2; i++)
+			toSend[i] = getCommand(i) + '0';
 
-			sendToServer(toSend);														// send command
-		}
+		sendToServer(toSend);														// send command
 	}
 }
