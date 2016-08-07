@@ -3,7 +3,10 @@
 #include "protocol.h"
 
 class Ai {
+private:
+	static protocol_team pivot;
 public:
+	static void setPivot(protocol_team t) { pivot = t; };
 	static void aiInit(void);
 	static void ai(protocol_data AI_info);
 	static void CharacterInit(int i, int x);

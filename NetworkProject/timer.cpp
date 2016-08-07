@@ -62,10 +62,6 @@ void Timer::update(int count) {
 
 	Network::update();
 
-	if (Network::getMode() == MODE_SERVER || Network::getMode() == MODE_SINGLE) {
-		Game::update();
-		Game::draw();
-	}
 	if (Network::getMode() == MODE_NOTHING) {
 		Draw::naivefill(Rspr::infoMain);
 	}

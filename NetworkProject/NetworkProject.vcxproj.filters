@@ -9,72 +9,12 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
-    <Filter Include="셰이더 파일">
-      <UniqueIdentifier>{be6aa891-d270-4de4-b9c2-5697ef4f99aa}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\게임기반">
-      <UniqueIdentifier>{48107980-9ee8-41a7-9419-304e0f2b492b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="헤더 파일\게임기반">
-      <UniqueIdentifier>{acd98faf-4354-4f5d-b62f-8d2971055e66}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="protocol.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="draw.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="unit.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="InitShader.h">
-      <Filter>헤더 파일\게임기반</Filter>
-    </ClInclude>
-    <ClInclude Include="key.h">
-      <Filter>헤더 파일\게임기반</Filter>
-    </ClInclude>
-    <ClInclude Include="lodepng.h">
-      <Filter>헤더 파일\게임기반</Filter>
-    </ClInclude>
-    <ClInclude Include="mat.h">
-      <Filter>헤더 파일\게임기반</Filter>
-    </ClInclude>
-    <ClInclude Include="vec.h">
-      <Filter>헤더 파일\게임기반</Filter>
-    </ClInclude>
-    <ClInclude Include="shader.h">
-      <Filter>헤더 파일\게임기반</Filter>
-    </ClInclude>
-    <ClInclude Include="timer.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="sprite.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="network.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="gui.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="resource.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="game.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="spline.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="debug.h">
-      <Filter>헤더 파일\게임기반</Filter>
-    </ClInclude>
-    <ClInclude Include="effect.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="utility.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="ai.h">
@@ -85,64 +25,11 @@
     <ClCompile Include="main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="draw.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="unit.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="lodepng.cpp">
-      <Filter>소스 파일\게임기반</Filter>
-    </ClCompile>
-    <ClCompile Include="key.cpp">
-      <Filter>소스 파일\게임기반</Filter>
-    </ClCompile>
-    <ClCompile Include="InitShader.cpp">
-      <Filter>소스 파일\게임기반</Filter>
-    </ClCompile>
-    <ClCompile Include="shader.cpp">
-      <Filter>소스 파일\게임기반</Filter>
-    </ClCompile>
-    <ClCompile Include="timer.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="sprite.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="game.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="network.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="resource.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="gui.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="debug.cpp">
-      <Filter>소스 파일\게임기반</Filter>
-    </ClCompile>
-    <ClCompile Include="effect.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="ai.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="default_v.glsl">
-      <Filter>셰이더 파일</Filter>
-    </None>
-    <None Include="default_f.glsl">
-      <Filter>셰이더 파일</Filter>
-    </None>
-    <None Include="sprite_v.glsl">
-      <Filter>셰이더 파일</Filter>
-    </None>
-    <None Include="sprite_f.glsl">
-      <Filter>셰이더 파일</Filter>
-    </None>
   </ItemGroup>
 </Project>

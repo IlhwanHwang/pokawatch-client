@@ -10,7 +10,6 @@
 // Especially, protocol structure is seen by remote AI program.
 
 // Team enum
-// do not touch. TEAM_POSTECH = 1, TEAM_KAIST = 2, for array index purpose.
 typedef enum {
 	TEAM_NULL,
 	TEAM_POSTECH = 1,
@@ -92,6 +91,7 @@ typedef struct {
 #define CLIENT_NUM_MAX 2
 #define TEAM_NUM_MAX 2
 #define UNIT_NUM_MAX 6
+#define UNIT_PER_TEAM (UNIT_NUM_MAX/2)
 #define POISON_NUM_MAX 30
 #define PETAL_NUM_MAX 12
 #define MUSHROOM_NUM_MAX 5

@@ -12,7 +12,7 @@
 #include <cstdlib>
 #include <time.h>
 
-int Network::team;
+protocol_team Ai::pivot = TEAM_POSTECH;
 
 void Ai::aiInit(void)
 {
@@ -174,7 +174,7 @@ void Ai::CharacterInit(int i, int x)
 
 void Ai::move(int i, protocol_direction x)
 {
-	if (Network::getTeam() == TEAM_POSTECH)
+	if (Network::getTeam() == pivot)
 		Network::setCommand(i, direction_to_movecommand(x));
 	else
 		Network::setCommand(i, direction_to_movecommand(direction_mirror(x)));
@@ -182,7 +182,7 @@ void Ai::move(int i, protocol_direction x)
 
 void Ai::attack(int i, protocol_direction x)
 {
-	if (Network::getTeam() == TEAM_POSTECH)
+	if (Network::getTeam() == pivot)
 		Network::setCommand(i, direction_to_attackcommand(x));
 	else
 		Network::setCommand(i, direction_to_attackcommand(direction_mirror(x)));
@@ -190,7 +190,7 @@ void Ai::attack(int i, protocol_direction x)
 
 void Ai::skill(int i, protocol_direction x)
 {
-	if (Network::getTeam() == TEAM_POSTECH)
+	if (Network::getTeam() == pivot)
 		Network::setCommand(i, direction_to_skillcommand(x));
 	else
 		Network::setCommand(i, direction_to_skillcommand(direction_mirror(x)));

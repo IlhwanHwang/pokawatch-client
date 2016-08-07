@@ -154,49 +154,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="ai.h" />
-    <ClInclude Include="debug.h" />
-    <ClInclude Include="draw.h" />
-    <ClInclude Include="effect.h" />
-    <ClInclude Include="game.h" />
-    <ClInclude Include="gui.h" />
-    <ClInclude Include="InitShader.h" />
-    <ClInclude Include="key.h" />
-    <ClInclude Include="lodepng.h" />
-    <ClInclude Include="mat.h" />
     <ClInclude Include="network.h" />
     <ClInclude Include="protocol.h" />
-    <ClInclude Include="resource.h" />
-    <ClInclude Include="shader.h" />
-    <ClInclude Include="spline.h" />
-    <ClInclude Include="sprite.h" />
-    <ClInclude Include="timer.h" />
-    <ClInclude Include="unit.h" />
-    <ClInclude Include="utility.h" />
-    <ClInclude Include="vec.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ai.cpp" />
-    <ClCompile Include="debug.cpp" />
-    <ClCompile Include="draw.cpp" />
-    <ClCompile Include="effect.cpp" />
-    <ClCompile Include="game.cpp" />
-    <ClCompile Include="gui.cpp" />
-    <ClCompile Include="InitShader.cpp" />
-    <ClCompile Include="key.cpp" />
-    <ClCompile Include="lodepng.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="resource.cpp" />
     <ClCompile Include="network.cpp" />
-    <ClCompile Include="shader.cpp" />
-    <ClCompile Include="sprite.cpp" />
-    <ClCompile Include="timer.cpp" />
-    <ClCompile Include="unit.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="default_f.glsl" />
-    <None Include="default_v.glsl" />
-    <None Include="sprite_f.glsl" />
-    <None Include="sprite_v.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
