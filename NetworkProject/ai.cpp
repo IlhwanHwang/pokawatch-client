@@ -5,7 +5,6 @@ protocol_team Ai::pivot = TEAM_POSTECH;
 void Ai::aiInit(void)
 {
 	// Initializing sequence
-
 	// Example on POSTECH side
 	setPivot(TEAM_POSTECH);
 

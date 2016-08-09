@@ -132,8 +132,7 @@ typedef enum {
 	COMMAND_SPAWN_PHYS,
 	COMMAND_SPAWN_LIFE,
 	COMMAND_SPAWN_ME,
-	COMMAND_SPAWN_CHEM,
-	COMMAND_FLAG
+	COMMAND_SPAWN_CHEM
 } protocol_command;
 
 typedef struct {
@@ -160,8 +159,6 @@ typedef struct {
 //NETWORK PROTOCOL
 
 #define PORT_STRING "2222"
-#define SERV_IP_STRING "141.223.85.241"
-
 
 #define MODE_NOTHING 7
 #define MODE_SERVER 9
@@ -174,11 +171,6 @@ typedef struct {
 #define MESSAGE_TO_SERVER_SIZE 16
 
 #define GAME_START_CHAR 'G'
-
-#define TEAM_POSTECH_SPAWN_X 0
-#define TEAM_POSTECH_SPAWN_Y 0
-#define TEAM_KAIST_SPAWN_X 3
-#define TEAM_KAIST_SPAWN_Y 0
 
 #define POINT_X1 (MAP_WIDTH / 2 - 2)
 #define POINT_Y1 (MAP_HEIGHT / 2 - 3)
@@ -219,9 +211,7 @@ typedef struct {
 #define CHEM_MUSHROOM_DAMAGE 10
 
 #define INVINCIBLE_SPAN 5
-
 #define HERO_PERIOD 5
-
 #define ARBITRARY_BIG_NUM 999
 
 inline int team_to_index(protocol_team t) {
@@ -528,6 +518,18 @@ inline protocol_command dep_to_spawncommand(protocol_dep dep) {
 
 static inline int mirror_x(int x) {
 	return MAP_WIDTH - x - 1;
+}
+
+inline protocol_command mirror_command(protocol_command c) {
+	switch (c) {
+	case COMMAND_MOVE_RIGHT: return COMMAND_MOVE_LEFT;
+	case COMMAND_MOVE_LEFT: return COMMAND_MOVE_RIGHT;
+	case COMMAND_ATTACK_RIGHT: return COMMAND_ATTACK_LEFT;
+	case COMMAND_ATTACK_LEFT: return COMMAND_ATTACK_RIGHT;
+	case COMMAND_SKILL_RIGHT: return COMMAND_SKILL_LEFT;
+	case COMMAND_SKILL_LEFT: return COMMAND_SKILL_RIGHT;
+	default: return c;
+	}
 }
 
 inline protocol_unit mirror_unit(protocol_unit u) {

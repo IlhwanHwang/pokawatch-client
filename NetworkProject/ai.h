@@ -11,8 +11,8 @@ public:
 	static protocol_team getPivot() { return pivot; }
 	static void aiInit(void);
 	static void ai(protocol_data info);
-	static void CharacterInit(int i, int x) {
-		Network::setCharacterSelection(i % UNIT_PER_TEAM, (protocol_dep)x);
+	static void CharacterInit(int i, protocol_dep x) {
+		Network::setCharacterSelection(i % UNIT_PER_TEAM, x);
 	};
 	static void move(int i, protocol_direction x) {
 		if (Network::getTeam() == pivot)
@@ -35,4 +35,10 @@ public:
 	static void spawn(int i, protocol_dep x) {
 		Network::setCommand(i % UNIT_PER_TEAM, spawn_command(x));
 	};
+	static void command(int i, protocol_command x) {
+		if (Network::getTeam() == pivot)
+			Network::setCommand(i % UNIT_PER_TEAM, x);
+		else
+			Network::setCommand(i % UNIT_PER_TEAM, mirror_command(x));
+	}
 };
