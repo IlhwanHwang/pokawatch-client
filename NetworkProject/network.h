@@ -22,10 +22,10 @@ private:
 	static protocol_team team;														// 0 : TEAM_NULL, 1: TEAM_POSTECH, 2: TEAM_KAIST
 
 public:
-	static void init(char * argv);								// initiate network state
+	static void init(char * argv, char * port);								// initiate network state
 	static void loop();
 	static void ErrorHandling(char *message);		// Error handling
-	static void makeClientSocket();					// Client socket making routine
+	static void makeClientSocket(char * port);					// Client socket making routine
 	static void getProtocolDataFromServer();		// Client message recieving routine
 	static void recieveGameStart();					// Client message recieving for game start
 	static void sendToServer(char message[]);		// Client message sending routine

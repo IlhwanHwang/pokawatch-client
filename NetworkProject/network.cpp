@@ -28,10 +28,10 @@ void Network::ErrorHandling(char *message)  //Error handling routine
 	exit(1);
 }
 
-void Network::makeClientSocket() // Client socket making routine
+void Network::makeClientSocket(char * port) // Client socket making routine
 {
 	string servIpString = serverIpArg;
-	string portNumString = PORT_STRING;
+	string portNumString = port;
 	char * servIp = (char*)servIpString.c_str();
 	char * portNum = (char*)portNumString.c_str();
 
@@ -100,11 +100,11 @@ void Network::sendToServer(char message[]) // message sending routine
 	send(hSocket, message, sizeof(message), 0);
 }
 
-void Network::init(char * argv) {
+void Network::init(char * argv, char * port) {
 	setMode(MODE_CLIENT);
 	serverIpArg = argv;
 
-	makeClientSocket();
+	makeClientSocket(port);
 
 	int strLen;																			// ∆¿ ¡§∫∏ ¿˙¿Â
 	char teamInfo[8];
